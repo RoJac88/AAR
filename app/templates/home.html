@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2 class="title">Banco de Dados<br>Associação Amigos do Rangel</h2>
+    {% if prods %}
+    <div>
+        <table class="db-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Preço (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for prod in prods %}
+                <tr>
+                    <th>{{prod[0]}}</th>
+                    <th>{{prod[1]}}</th>
+                    <th>{{prod[2]}}</th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table> 
+    </div>
+    {% endif %}
+    <div>
+        <div class="form-container">
+            <h3>Inserir novo Produto</h3>
+            <form method=post>
+                <label for="nome">Nome do Produto:</label>
+                <input type="text" id="nome" name="nome"><br><br>
+                <label for="qtd">Quantidade:</label>
+                <input type="number" id="qtd" name="qtd"><br><br>
+                <label for="preco">Preço:</label>
+                <input type="number" id="preco" name="preco"><br><br>
+                <input type="submit" value="Inserir" class="insert">
+            </form>
+        </div>
+        <div style="float: right; width: 45vw;">
+            <div class="hc">
+                <a href="https://www.hc.fm.usp.br/">
+                    <img src="{{url_for('static', filename='hc.jpg')}}">
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

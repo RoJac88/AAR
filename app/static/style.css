@@ -1,0 +1,82 @@
+#content {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding: 8px;
+  font-family: Helvetica, sans-serif;
+}
+
+.title {
+  text-align: center;
+}
+
+.db-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 5vh;
+}
+
+.db-table td, .db-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.db-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.db-table tbody tr:hover {background-color: #ddd;}
+
+.db-table thead {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.db-table tbody th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: black;
+}
+
+.form-container {
+  float: left;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  padding: 4px;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: fit-content;
+  padding-bottom: 1.5em;
+}
+
+input {
+  float: right;
+  margin-left: 6px;
+}
+.insert {
+  background-color: #4CAF50;
+  color: white;
+  width: 100%;
+  font-weight: bold;
+  min-height: 2em;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.hc {
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+}
+
+a a:visited a:link {
+  text-decoration: none;
+}
+
+img {
+  width: 60%;
+}
