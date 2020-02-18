@@ -25,7 +25,7 @@ venv\Scripts\activate
 ```
 #### Linux / WSL:
 ```
-source venv/scripts/activate
+source venv/bin/activate
 ```
 ### 4. Instale as dependências do projeto
 ```
