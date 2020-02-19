@@ -35,9 +35,22 @@ ou
 ```
 pip3 install -r requirements.txt
 ```
-### 5. Seja feliz
+### 5. Aponte Flask para o ponto de entrada da aplicação
+#### Windows:
+```
+set FLASK_APP=server.py
+```
+#### Linux / WSL:
+```
+export FLASK_APP=server.py
+```
+### 6. Inicie a aplicação
+```
+flask run
+```
+Acesse: http://localhost:5000/
+### 7. Seja feliz
 =)
-
 
 ### Agradecimentos especiais
 [Hospital das Clínicas](https://www.hc.fm.usp.br/).
