@@ -3,8 +3,8 @@
     <div class="head">
         <h2 class="title">Banco de Dados<br>Associação Amigos do Rangel</h2>
     </div>
-    {% if prods %}
     <div class="body">
+        {% if prods %}
         <table class="db-table">
             <thead>
                 <tr>
@@ -22,9 +22,9 @@
                 </tr>
                 {% endfor %}
             </tbody>
-        </table> 
+        </table>
+        {% endif %}
     </div>
-    {% endif %}
     <div class="form-container">
         <h3>Inserir novo Produto</h3>
         <form method=post>
