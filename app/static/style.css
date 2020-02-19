@@ -7,10 +7,17 @@
                        "body"
                        "form-container" 
                        "logo";
-  margin-left: 10vw;
-  margin-right: 10vw;
   padding: 8px;
+  margin-left: 2vw;
+  margin-right: 2vw;
   font-family: Helvetica, sans-serif;
+}
+
+@media (min-width: 899px) {
+  #content {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
 }
 
 @media (min-width: 899px) {
