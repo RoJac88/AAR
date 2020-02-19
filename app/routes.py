@@ -1,8 +1,8 @@
 from app import app, get_db
-from flask import render_template, request 
+from flask import render_template, request, redirect, url_for
 
 @app.route('/', methods=['GET', 'POST'])
-def hello():
+def home():
     db = get_db()
     c = db.cursor()
     if request.method == 'GET':
@@ -19,6 +19,5 @@ def hello():
             c.execute("INSERT INTO produtos VALUES (?,?,?)", prod)
             db.commit()
             print('Produto inserido')
-        c.execute('SELECT * FROM produtos')
-        prods = c.fetchall()
-        return render_template('home.html', prods=prods)
+        return redirect(url_for('home'))
+        # O redirecionamento evita que o formulário seja reenviado ao atualizar a página
