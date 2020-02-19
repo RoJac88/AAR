@@ -1,12 +1,45 @@
 #content {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: auto;
+  row-gap: 4vh;
+  grid-template-areas: "head"
+                       "body"
+                       "form-container" 
+                       "logo";
   margin-left: 10vw;
   margin-right: 10vw;
   padding: 8px;
   font-family: Helvetica, sans-serif;
 }
 
+@media (min-width: 899px) {
+  #content {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 50% 50%;
+    gap: 2vh 6vw;
+    grid-template-areas: "head head"
+                         "body body"
+                         "form-container logo";
+  }
+}
+
+@media (min-width: 1095px) {
+  #content {
+    grid-template-columns: 40% 60%;
+  }
+}
+
+.head {
+  grid-area: head;
+}
+
 .title {
   text-align: center;
+}
+
+.body {
+  grid-area: body;
 }
 
 .db-table {
@@ -40,21 +73,36 @@
 }
 
 .form-container {
-  float: left;
+  grid-area: form-container;
   border: 2px solid #ddd;
   border-radius: 15px;
-  padding: 4px;
+  background-color: #f2f2f2;
   padding-left: 24px;
   padding-right: 24px;
-  width: fit-content;
-  padding-bottom: 1.5em;
+  width: auto;
+  padding-bottom: 12px;
+}
+
+.label {
+  float: left;
 }
 
 input {
   float: right;
+  width: 60%;
   margin-left: 6px;
+  margin-right: 12px;
 }
+
+@media (min-width: 899px) {
+  input {
+    width: auto;
+  }
+}
+
 .insert {
+  margin-right: 6px;
+  margin-top: 1.2em;
   background-color: #4CAF50;
   color: white;
   width: 100%;
@@ -63,20 +111,23 @@ input {
 }
 
 h3 {
+  margin-top: 0.8em;
   text-align: center;
   margin-bottom: 1.5em;
 }
 
-.hc {
+.logo {
+  grid-area: logo;
+  width: auto;
   text-align: center;
   border: 2px solid #ddd;
   border-radius: 15px;
 }
 
-a a:visited a:link {
-  text-decoration: none;
+img {
+  width: 70%;
 }
 
-img {
-  width: 60%;
+a a:visited a:link {
+  text-decoration: none;
 }
